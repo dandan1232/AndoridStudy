@@ -36,4 +36,16 @@
         android:layout_height="wrap_content"
         />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:hint="input your password"
+        android:scrollIndicators="bottom"
+        android:enabled="true"
+        android:ems="10"
+        android:id="@+id/ET"
+        android:imeOptions="actionDone"/>
+
+
 </LinearLayout>
