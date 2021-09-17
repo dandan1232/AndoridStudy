@@ -1,14 +1,17 @@
 package online.danbao.andoridstudy;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
+
 
 public class LoginPassword extends AppCompatActivity {
-    //    (9.16)
+/*    //    (9.16)
     TextView textView;
     EditText ET;
     String str;
@@ -45,7 +48,6 @@ public class LoginPassword extends AppCompatActivity {
 //                textView.setText(str);
 //            }
 //        });
-
         textView.setOnLongClickListener(new View.OnLongClickListener(){
             @Override
             public boolean onLongClick(View v){
@@ -53,6 +55,26 @@ public class LoginPassword extends AppCompatActivity {
                 str1 = ET_pwd.getText().toString();
                 textView.setText("user:"+str+"   password:"+str1);
                 return true;
+            }
+        });
+    }*/
+
+    //9.17作业版
+    EditText username,pwd;
+    Button submit;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login_password);
+        username=(EditText)findViewById(R.id.username);
+        pwd = (EditText) findViewById(R.id.pwd);
+        submit=(Button)findViewById(R.id.submit);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name =username.getText().toString();
+                String password =pwd.getText().toString();
+                Toast.makeText(LoginPassword.this,"user input message include name:"+name+" password:"+password,Toast.LENGTH_SHORT).show();
             }
         });
     }
