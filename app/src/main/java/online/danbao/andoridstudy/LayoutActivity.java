@@ -10,6 +10,6 @@ public class LayoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_linearlayout);
-        setContentView(R.layout.activity_gridlayout);
+        setContentView(R.layout.activity_relativelayout_execrise);
     }
 }

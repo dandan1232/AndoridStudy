@@ -9,17 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndoridStudy">
-        <activity android:name=".LayoutActivity">
+        <activity android:name=".RadioButtonActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LayoutActivity"></activity>
         <activity android:name=".ImageViewActivity"></activity>
         <activity android:name=".ButtonActivity"></activity>
         <activity android:name=".LoginPassword"></activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

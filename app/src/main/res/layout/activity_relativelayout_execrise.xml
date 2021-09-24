@@ -4,12 +4,12 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:id="@+id/top"
         android:text="返回首页"
-        android:textSize="28dp" />
+        android:textSize="28dp"/>
 
     <Button
         android:id="@+id/btn1"
@@ -18,105 +18,103 @@
         android:layout_centerVertical="true"
         android:text="aboveAndleft"
         android:textAllCaps="false"
-        android:textSize="18dp" />
-
+        android:textSize="18dp"
+        />
     <Button
-        android:id="@+id/btn2"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn1"
-        android:layout_centerVertical="true"
+        android:id="@+id/btn2"
         android:text="left"
         android:textAllCaps="false"
-        android:textSize="18dp" />
-
+        android:textSize="18dp"
+        android:layout_below="@id/btn1"
+        android:layout_centerVertical="true"/>
     <Button
-        android:id="@+id/btn3"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn2"
-        android:layout_centerVertical="true"
+        android:id="@+id/btn3"
         android:text="belowAndleft"
         android:textAllCaps="false"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:layout_below="@id/btn2"
+        android:layout_centerVertical="true"/>
 
     <Button
-        android:id="@+id/btn4"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/btn1"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
         android:layout_toRightOf="@id/btn1"
+        android:layout_alignBottom="@id/btn1"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/btn4"
         android:text="above"
         android:textAllCaps="false"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:layout_centerVertical="true"/>
 
     <Button
-        android:id="@+id/btn5"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
+        android:id="@+id/btn5"
         android:layout_below="@id/btn4"
-        android:layout_alignTop="@id/btn2"
-        android:layout_alignBottom="@id/btn2"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
         android:layout_toRightOf="@id/btn2"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBottom="@id/btn2"
+        android:layout_alignTop="@id/btn2"
         android:text="center"
         android:textAllCaps="false"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:layout_centerVertical="true"/>
 
     <Button
-        android:id="@+id/btn6"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
+        android:id="@+id/btn6"
         android:layout_below="@id/btn5"
-        android:layout_alignTop="@id/btn3"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
         android:layout_toRightOf="@id/btn2"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@id/btn3"
         android:text="below"
         android:textAllCaps="false"
-        android:textSize="18dp" />
-
+        android:textSize="18dp"
+        android:layout_centerVertical="true"/>
     <Button
-        android:id="@+id/btn7"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/btn4"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/btn4"
         android:text="aboveAndright"
         android:textAllCaps="false"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:id="@+id/btn7"
+        android:layout_alignBottom="@id/btn4"
+        android:layout_toRightOf="@id/btn4"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
 
     <Button
-        android:id="@+id/btn8"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/btn5"
-        android:layout_alignBottom="@id/btn5"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/btn5"
+        android:id="@+id/btn8"
         android:text="right"
         android:textAllCaps="false"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:layout_alignBottom="@id/btn5"
+        android:layout_alignTop="@id/btn5"
+        android:layout_toRightOf="@id/btn5"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
 
     <Button
-        android:id="@+id/btn9"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/btn6"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/btn5"
         android:text="belowAndright"
         android:textAllCaps="false"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:id="@+id/btn9"
+        android:layout_alignTop="@id/btn6"
+        android:layout_toRightOf="@id/btn5"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>
