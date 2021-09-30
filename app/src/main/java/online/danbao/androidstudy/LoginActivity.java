@@ -1,4 +1,4 @@
-package online.danbao.andoridstudy;
+package online.danbao.androidstudy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     TextView textView;
     EditText ET;
     String str;
@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 //        通过find试图发现tv3对象
 //        用(TextView)进行强制类型转换
         textView = (TextView) findViewById(R.id.tv3);

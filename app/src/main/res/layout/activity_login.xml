@@ -7,7 +7,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:visibility="visible"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
     <!--    两种输入文本方式：1.直接输入-->
     <TextView
         android:layout_width="match_parent"

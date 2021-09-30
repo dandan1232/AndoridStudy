@@ -1,8 +1,9 @@
-package online.danbao.andoridstudy;
+package online.danbao.androidstudy;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -60,21 +61,44 @@ public class LoginPassword extends AppCompatActivity {
     }*/
 
     //9.17作业版
-    EditText username,pwd;
-    Button submit;
+    EditText username, pwd;
+    Button submit, btn_call;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_password);
-        username=(EditText)findViewById(R.id.username);
+        username = (EditText) findViewById(R.id.username);
         pwd = (EditText) findViewById(R.id.pwd);
-        submit=(Button)findViewById(R.id.submit);
+        submit = (Button) findViewById(R.id.submit);
+        btn_call = (Button) findViewById(R.id.btn_call);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name =username.getText().toString();
-                String password =pwd.getText().toString();
-                Toast.makeText(LoginPassword.this,"user input message include name:"+name+" password:"+password,Toast.LENGTH_SHORT).show();
+                String name = username.getText().toString();
+                String password = pwd.getText().toString();
+                Toast.makeText(LoginPassword.this, "user input message include name:" + name + " password:" + password, Toast.LENGTH_SHORT).show();
+                //显示intent
+////                Intent intent = new Intent(LoginPassword.this, LoginActivity.class);
+//                //一
+//                Intent intent = new Intent();
+//                //二
+//                intent.setClassName("online.danbao.andoridstudy", "online.danbao.andoridstudy.LoginActivity");
+//                startActivity(intent);
+
+                //隐式intent
+                Intent intent = new Intent();
+                intent.setAction("online.danbao.androidstudy.stu_info");
+                startActivity(intent);
+            }
+        });
+
+        btn_call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:18962494510"));
+                startActivity(intent);
             }
         });
     }

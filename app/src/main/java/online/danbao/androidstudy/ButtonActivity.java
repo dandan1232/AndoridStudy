@@ -1,4 +1,4 @@
-package online.danbao.andoridstudy;
+package online.danbao.androidstudy;
 
 
 import androidx.appcompat.app.AppCompatActivity;

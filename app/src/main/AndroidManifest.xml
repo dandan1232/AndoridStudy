@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="online.danbao.andoridstudy">
+    package="online.danbao.androidstudy">
 
     <application
         android:allowBackup="true"
@@ -9,18 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndoridStudy">
-        <activity android:name=".RadioButtonActivity">
+        <activity android:name="online.danbao.androidstudy.CheckBoxActivity"></activity>
+        <activity android:name="online.danbao.androidstudy.RadioButtonActivity" />
+        <activity android:name="online.danbao.androidstudy.LayoutActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LayoutActivity"></activity>
-        <activity android:name=".ImageViewActivity"></activity>
-        <activity android:name=".ButtonActivity"></activity>
-        <activity android:name=".LoginPassword"></activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name="online.danbao.androidstudy.ImageViewActivity" />
+        <activity android:name="online.danbao.androidstudy.ButtonActivity" />
+        <activity android:name="online.danbao.androidstudy.LoginPassword" >
+
+        </activity>
+        <activity android:name="online.danbao.androidstudy.LoginActivity">
+
+            <intent-filter>
+            <action android:name="online.danbao.androidstudy.stu_info"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

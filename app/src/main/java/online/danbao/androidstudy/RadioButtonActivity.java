@@ -1,4 +1,4 @@
-package online.danbao.andoridstudy;
+package online.danbao.androidstudy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -37,6 +37,6 @@ public class RadioButtonActivity extends AppCompatActivity {
             str = "BOY";
         } else
             str = "GIRL";
-        Toast.makeText(RadioButtonActivity.this, "Your are a  " + str, Toast.LENGTH_LONG).show();
+        Toast.makeText(RadioButtonActivity.this, "Your are a  " + str, Toast.LENGTH_SHORT).show();
     }
 }
