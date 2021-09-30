@@ -27,5 +27,4 @@
         android:layout_gravity="bottom|center_horizontal"
         android:textSize="28dp" />
 
-
 </FrameLayout>

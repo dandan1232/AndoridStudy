@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-public class LoginPassword extends AppCompatActivity {
+public class LoginPasswordActivity extends AppCompatActivity {
 /*    //    (9.16)
     TextView textView;
     EditText ET;
@@ -77,9 +77,9 @@ public class LoginPassword extends AppCompatActivity {
             public void onClick(View v) {
                 String name = username.getText().toString();
                 String password = pwd.getText().toString();
-                Toast.makeText(LoginPassword.this, "user input message include name:" + name + " password:" + password, Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginPasswordActivity.this, "user input message include name:" + name + " password:" + password, Toast.LENGTH_SHORT).show();
                 //显示intent
-////                Intent intent = new Intent(LoginPassword.this, LoginActivity.class);
+////                Intent intent = new Intent(LoginPasswordActivity.this, LoginActivity.class);
 //                //一
 //                Intent intent = new Intent();
 //                //二

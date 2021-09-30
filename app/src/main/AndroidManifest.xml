@@ -9,26 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndoridStudy">
-        <activity android:name="online.danbao.androidstudy.CheckBoxActivity"></activity>
-        <activity android:name="online.danbao.androidstudy.RadioButtonActivity" />
-        <activity android:name="online.danbao.androidstudy.LayoutActivity" >
+        <activity android:name=".StudentInfomationActivity">
+            <intent-filter>
+                <action android:name="online.danbao.androidstudy.stu_info" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CheckBoxActivity" />
+        <activity android:name=".RadioButtonActivity" />
+        <activity android:name=".LayoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="online.danbao.androidstudy.ImageViewActivity" />
-        <activity android:name="online.danbao.androidstudy.ButtonActivity" />
-        <activity android:name="online.danbao.androidstudy.LoginPassword" >
-
-        </activity>
-        <activity android:name="online.danbao.androidstudy.LoginActivity">
-
-            <intent-filter>
-            <action android:name="online.danbao.androidstudy.stu_info"/>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
+        <activity android:name=".ImageViewActivity" />
+        <activity android:name=".ButtonActivity" />
+        <activity android:name=".LoginPasswordActivity"></activity>
+        <activity android:name=".LoginActivity">
 
         </activity>
     </application>

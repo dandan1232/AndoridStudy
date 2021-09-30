@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class LayoutActivity extends AppCompatActivity {
     Button submit;
@@ -22,7 +21,7 @@ public class LayoutActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LayoutActivity.this, LoginPassword.class);
+                Intent intent = new Intent(LayoutActivity.this, LoginPasswordActivity.class);
                 startActivity(intent);
             }
         });
