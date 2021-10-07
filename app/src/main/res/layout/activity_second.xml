@@ -19,7 +19,7 @@
         android:textSize="28dp"
         android:id="@+id/cb_sign"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RETURN"
         android:textSize="28dp"

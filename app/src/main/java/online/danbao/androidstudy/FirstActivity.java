@@ -12,12 +12,14 @@ public class FirstActivity extends AppCompatActivity {
     Intent intent;
     MyApplication app;
     TextView tv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-        tv =(TextView)findViewById(R.id.tv_result);
+        tv = (TextView) findViewById(R.id.tv_result);
     }
+
     public void send(View v) {
         int ID = v.getId();
         switch (ID) {
@@ -47,16 +49,20 @@ public class FirstActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_4:
+                //result要回应
                 intent = new Intent(FirstActivity.this, SecondActivity.class);
                 intent.putExtra("username", "zhangsan");
+                //响应码
                 startActivityForResult(intent, 1);
+                break;
         }
     }
+
     @Override
-    protected  void onActivityResult(int requestCode,int resultCode,@Nullable Intent data){
-        super.onActivityResult(requestCode,resultCode,data);
-        if (resultCode==1){
-            if(requestCode==RESULT_OK && data!=null){
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
+            if (resultCode == RESULT_OK && data != null) {
                 String str = data.getStringExtra("return_str");
                 tv.setText(str);
 
