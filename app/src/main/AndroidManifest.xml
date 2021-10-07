@@ -9,26 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndoridStudy">
+        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".FirstActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".StudentInfomationActivity">
             <intent-filter>
                 <action android:name="online.danbao.androidstudy.stu_info" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".CheckBoxActivity" />
         <activity android:name=".RadioButtonActivity" />
         <activity android:name=".LayoutActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".ImageViewActivity" />
         <activity android:name=".ButtonActivity" />
-        <activity android:name=".LoginPasswordActivity"></activity>
-        <activity android:name=".LoginActivity">
-
-        </activity>
+        <activity android:name=".LoginPasswordActivity" />
+        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>
