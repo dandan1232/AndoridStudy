@@ -38,6 +38,7 @@ public class FirstActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_3:
+                //设置app全局变量对象
                 intent = new Intent(FirstActivity.this, SecondActivity.class);
                 app = (MyApplication) getApplication();
                 app.setAuthorname("wanger");

@@ -15,7 +15,8 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
-    Application app;
+//    Application app;
+    MyApplication app;
     TextView tv;
     CheckBox cb;
     Button btn;
@@ -33,16 +34,16 @@ public class SecondActivity extends AppCompatActivity {
 //        int pwd = intent.getIntExtra("password",0);
 //        tv.setText("name:"+str+".\n"+"pwd:"+pwd+".");
 //        bundle多个值传递
-        Bundle bundle = intent.getExtras();
-        String str = bundle.getString("username");
-        int pwd = bundle.getInt("password",0);
+//        Bundle bundle = intent.getExtras();
+//        String str = bundle.getString("username");
+//        int pwd = bundle.getInt("password",0);
+//        tv.setText("name:"+str+".\n"+"pwd:"+pwd+".");
 //        application
-//        app = (MyApplication) getApplication();
-//        String str = app.getAuthorname();
-//        String sex = app.getSex();
-//        int age = app.getAge();
-//        tv.setText("AuthorName is "+ str+"Age is"+age+"  sex is "+sex);
-        tv.setText("name:"+str+".\n"+"pwd:"+pwd+".");
+        app = (MyApplication) getApplication();
+        String str = app.getAuthorname();
+        String sex = app.getSex();
+        int age = app.getAge();
+        tv.setText("AuthorName is "+ str+" Age is "+age+"  sex is "+sex);
 //        result回传
 //        str = intent.getStringExtra("username");
 //        tv.setText(str+", your need to sign!");
