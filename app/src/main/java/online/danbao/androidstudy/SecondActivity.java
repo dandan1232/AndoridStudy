@@ -29,20 +29,20 @@ public class SecondActivity extends AppCompatActivity {
         btn = (Button)findViewById(R.id.btn_return);
         Intent intent = getIntent();
 //        单个值传递
-        String str = intent.getStringExtra("username");
-        int pwd = intent.getIntExtra("password",0);
-        tv.setText("name:"+str+".\n"+"pwd:"+pwd+".");
-//        多个值传递
-//        Bundle bundle = intent.getExtras();
-//        String str = bundle.getString("username");
-//        int pwd = bundle.getInt("password",0);
+//        String str = intent.getStringExtra("username");
+//        int pwd = intent.getIntExtra("password",0);
+//        tv.setText("name:"+str+".\n"+"pwd:"+pwd+".");
+//        bundle多个值传递
+        Bundle bundle = intent.getExtras();
+        String str = bundle.getString("username");
+        int pwd = bundle.getInt("password",0);
 //        application
 //        app = (MyApplication) getApplication();
 //        String str = app.getAuthorname();
 //        String sex = app.getSex();
 //        int age = app.getAge();
 //        tv.setText("AuthorName is "+ str+"Age is"+age+"  sex is "+sex);
-//        tv.setText("name:"+str+".\n"+",pwd:"+pwd+".");
+        tv.setText("name:"+str+".\n"+"pwd:"+pwd+".");
 //        result回传
 //        str = intent.getStringExtra("username");
 //        tv.setText(str+", your need to sign!");

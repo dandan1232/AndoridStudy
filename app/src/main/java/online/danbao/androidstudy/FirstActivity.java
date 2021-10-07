@@ -23,12 +23,13 @@ public class FirstActivity extends AppCompatActivity {
         switch (ID) {
             case R.id.btn_1:
                 intent = new Intent(FirstActivity.this, SecondActivity.class);
-//                  一条一条消息的传递
+//                  一条一条消息的传递：传简单值方法之一：putExtra
                 intent.putExtra("username", "zhangsan");
                 intent.putExtra("password", 123456);
                 startActivity(intent);
                 break;
             case R.id.btn_2:
+//                创建Bundle
                 intent = new Intent(FirstActivity.this, SecondActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("username", "LIsi");
