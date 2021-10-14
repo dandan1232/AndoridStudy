@@ -1,2 +1,3 @@
+include ':fragmentexample'
 include ':app'
 rootProject.name = "AndoridStudy"
