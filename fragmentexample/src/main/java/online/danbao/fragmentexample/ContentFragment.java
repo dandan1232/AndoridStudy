@@ -1,7 +1,9 @@
 package online.danbao.fragmentexample;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -33,8 +35,34 @@ public class ContentFragment extends Fragment {
     public ContentFragment() {
         // Required empty public constructor
     }
-    public void setMsg(String  msg) {
+
+
+    private OnTextSelectedListener callback;
+
+
+    public void setMsg(String msg) {
         this.msg = msg;
+    }
+
+
+    //interface
+    public interface OnTextSelectedListener {
+        public void OnContentSelected(String mymsg);
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        try {
+            this.callback = (OnTextSelectedListener) getActivity();
+        } catch (ClassCastException e) {
+            throw new ClassCastException(getActivity().toString());
+        }
+    }
+
+    //set listener
+    public void setOnTextSelectedListner(OnTextSelectedListener callback) {
+        this.callback = callback;
     }
 
     /**
@@ -73,16 +101,16 @@ public class ContentFragment extends Fragment {
         tv_value = (TextView) view.findViewById(R.id.tv_value);
 
         //passValue1
-        args = getArguments();
-        btn_getValue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (args != null) {
-                    String value = args.getString("Key");
-                    tv_value.setText("getMessage" + value);
-                }
-            }
-        });
+//        args = getArguments();
+//        btn_getValue.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (args != null) {
+//                    String value = args.getString("Key");
+//                    tv_value.setText("getMessage" + value);
+//                }
+//            }
+//        });
 
 
 //        //PassValue2
@@ -98,6 +126,14 @@ public class ContentFragment extends Fragment {
 //                }
 //            }
 //        });
+        //PassValue3
+        tv_value.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //call
+                callback.OnContentSelected("PassValue3");
+            }
+        });
         return view;
     }
 }
