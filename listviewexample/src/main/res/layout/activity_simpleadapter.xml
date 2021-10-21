@@ -16,5 +16,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1902343231+林丹丹+软件1921" />
+        android:text="#copyright：1902343231+林丹丹+软件1921"
+        android:gravity="center"/>
 </LinearLayout>
