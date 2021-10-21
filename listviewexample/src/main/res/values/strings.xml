@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ListViewExample</string>
+    <string-array name="data_array" >
+        <item>first</item>
+        <item>second</item>
+        <item>third</item>
+        <item>fourth</item>
+        <item>fifth</item>
+    </string-array>
+</resources>
