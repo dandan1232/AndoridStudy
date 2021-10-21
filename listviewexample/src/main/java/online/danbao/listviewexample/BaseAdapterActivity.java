@@ -40,31 +40,31 @@ public class BaseAdapterActivity extends AppCompatActivity {
     private ArrayList<Map<String, Object>> getData() {
 //        ArrayList<Map<String,Object>> list=new ArrayList<Map<String, Object>>();
         Map<String, Object> map = new HashMap<String, Object>();
-        map.put("img", R.drawable.a);
+        map.put("img", R.drawable.qianru);
         map.put("title", "嵌入式课程");
         map.put("info", "基础课程");
         list.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("img", R.drawable.b);
+        map.put("img", R.drawable.clanguage);
         map.put("title", "C语言课程");
         map.put("info", "基础语言");
         list.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("img", R.drawable.c);
+        map.put("img", R.drawable.java);
         map.put("title", "Java语言");
         map.put("info", "基础语言");
         list.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("img", R.drawable.d);
+        map.put("img", R.drawable.imageandroid);
         map.put("title", "Android开发");
         map.put("info", "移动核心课程");
         list.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("img", R.drawable.e);
+        map.put("img", R.drawable.python);
         map.put("title", "Python课程");
         map.put("info", "基础课程");
         list.add(map);
