@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/fragmentexample" />
             <option value="$PROJECT_DIR$/listviewexample" />
+            <option value="$PROJECT_DIR$/sharedpreference" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
