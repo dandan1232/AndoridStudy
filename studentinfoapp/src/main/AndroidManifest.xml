@@ -3,19 +3,31 @@
     package="online.danbao.studentinfoapp">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndoridStudy">
-        <activity android:name=".MainActivity">
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BasicInfoActivity" />
+        <activity android:name=".SchoolInfoActivity" />
+        <activity android:name=".OtherInfoActivity" />
+        <service android:name=".service.NativePlaceService"/>
+        <activity android:name=".LoginPasswordActivity" />
+        <receiver android:name=".OtherInfoActivity$MyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="showStudentInfo" >
+                </action>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

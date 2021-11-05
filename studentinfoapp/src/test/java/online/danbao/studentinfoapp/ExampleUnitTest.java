@@ -2,6 +2,12 @@ package online.danbao.studentinfoapp;
 
 import org.junit.Test;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.Charset;
+
 import static org.junit.Assert.*;
 
 /**
@@ -12,6 +18,52 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+        String test="110226:北京市平谷县\n" +
+                " \n" +
+                "110227:北京市怀柔县 110228:北京市密云县 110229:北京市延庆县";
+        String[] split = test.split(" ");
+        for (String info : split) {
+            String[] split1 = info.split(":");
+            System.out.println("地点："+split1[1]+"    前6位："+split1[0]);
+        }
+    }
+
+    @Test
+    public void getLocationInfo() throws IOException {
+        File file=new File("D:\\Study\\AndroidStudioProjects\\AndoridStudy\\studentinfoapp\\src\\androidTest\\assets\\location.txt");
+        Long length = file.length();
+        byte[] fileContent=new byte[length.intValue()];
+
+        InputStream inputStream=new FileInputStream(file);
+        inputStream.read(fileContent);
+        inputStream.close();
+        String s = new String(fileContent, Charset.defaultCharset());
+        System.out.println(s.length());
+
+//        BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("location.txt")));
+//        String locationInfo = null;
+//        while((locationInfo = br.readLine())!=null) {
+//
+//        }
+//
+//        String[] split = locationInfo.split(" ");
+//        for (String info : split) {
+//            String[] split1 = info.split(":");
+//            System.out.println("地点："+split1[1]+"    前6位："+split1[0]);
+//        }
+
+    }
+    @Test
+    public void getCard(){
+        String card="320581200011084120";
+        String idCard = card.substring(6, 14);
+        String year = idCard.substring(0, 4);
+        String month = idCard.substring(4, 6);
+        String day = idCard.substring(6, 8);
+        System.out.println(idCard);
+        System.out.println(year);
+        System.out.println(month);
+        System.out.println(day);
+
     }
 }
